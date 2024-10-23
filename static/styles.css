@@ -1,0 +1,106 @@
+
+.info-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 10px; /* Margen de 10px a cada lado */
+    max-width: 90%; /* Para que no ocupe todo el ancho */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+
+.container {
+    text-align: left;
+}
+
+.btn {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    text-decoration: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049; 
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Color rojo */
+    color: white; /* Color del texto */
+    margin-bottom: 15px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-align: center; /* Texto centrado */
+    font-family: Arial, sans-serif; /* Tipografía */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}
+.form-container input, .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+
+}

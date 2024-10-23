@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+
+
+    <title>Datos de Examen</title>
+ 
+
+</head>
+<body>
+    
+    <div class="info-box">
+        <h2>SEGUNDO PARCIAL TEM-742</h2>
+        <p><b>NOMBRE: </b>CHRISTIAN MENDOZA MACHACA</p>
+        <p><b>CARNET: </b>8325127</p>
+    </div>
+    
+    
+    
+    <div class="table-container">
+        <h2>GESTION DE PRODUCTOS</h2>
+        <div class="container">
+            <a class="btn" href="/agregar">Nuevo Producto</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>CANTIDAD</th>
+                    <th>PRECIO</th>
+                    <th>FECHA DE VENCIMIENTO</th>
+                    <th>CATEGORIA</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.id }}</td>
+                    <td>{{ producto.nombre }}</td>
+                    <td>{{ producto.cantidad }}</td>
+                    <td>{{ producto.precio }}</td>
+                    <td>{{ producto.fecha_vencimiento }}</td>
+                    <td>{{ producto.categoria }}</td>
+                    <td>
+                        <a href="/editar/{{ producto.id }}">Editar</a>
+                        <a href="/eliminar/{{ producto.id }}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            
+                <ul class="alert">
+                        {% for category, message in messages %}
+                            <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                </ul>
+            
+        {% endif %}
+    {% endwith %}
+    
+</body>
+</html>
